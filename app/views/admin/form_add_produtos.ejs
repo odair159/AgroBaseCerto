@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="utf-8">
+	<title>Cadastro de produtos</title>
+</head>
+<body>
+	<h1>Cadastre um novo Produto</h1>
+	<br/>
+	
+	
+
+	<form action="/produtos/salvar" method="post">
+		<label>Nome</label>
+		<input type="text" id="nome_produto" name="nome_produto" value="<%=produto.nome_produto %>" placeholder = "Nome do produto"/>
+		<br/>
+		<label>Descrição</label>
+		<textarea name="descricao_do_produto" id="descricao" cols="30" rows="10"><%=produto.desc_produto %> </textarea>
+		<br/>
+		<label>Validade</label>
+		<input type="date" id="vali_produto" name="vali_produto" value="<%=produto.vali_produto %>"  placeholder = "validade"/>
+		<br/>
+		<label>Registro no mapa</label>
+		<input type="text" id="reg_mapa" name="reg_produto" value="<%=produto.reg_mapa %>"  placeholder = "Registro"/>
+		<br/>
+		<label>Ingrediente Ativo</label>
+		<input type="text" id="ingr_ativo" name="ingr_produto" value="<%=produto.ingr_ativo %>"  placeholder = "Ingrediente Ativo"/>
+		<br/>
+		<input type="submit" value="Enviar" />
+		</form>
+	
+</body>
+</html>
